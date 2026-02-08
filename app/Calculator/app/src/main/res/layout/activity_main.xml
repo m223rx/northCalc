@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/resultContainer"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:gravity="end|bottom"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/functionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textExpression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/background"
+            android:textSize="26sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@color/background"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/functionBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnHistory"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/history"
+                android:src="@drawable/ic_history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/background" />
+
+            <ImageButton
+                android:id="@+id/btnCalculator"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/calculator"
+                android:src="@drawable/ic_calculator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnHistory"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/background" />
+
+            <ImageButton
+                android:id="@+id/btnBackspace"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/calculator"
+                android:src="@drawable/ic_backspace"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/background" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <GridLayout
+            android:id="@+id/keypad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:columnCount="4"
+            android:padding="20dp"
+            android:rowCount="5"
+            android:useDefaultMargins="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="C"
+                android:textColor="@color/red"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="()"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="%"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="/"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="7"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="8"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="9"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="*"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="4"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="5"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="6"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="-"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="2"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="3"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="+"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="+/-"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButton"
+                android:text="0"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="."
+                tools:ignore="HardcodedText" />
+
+            <Button
+                style="@style/CalcButtonOperator"
+                android:text="="
+                tools:ignore="HardcodedText" />
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

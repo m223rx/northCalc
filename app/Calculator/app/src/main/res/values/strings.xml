@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="history">History</string>
+    <string name="calculator">Calculator</string>
+    <string name="c">C</string>
+    <string name="para">()</string>
+</resources>
