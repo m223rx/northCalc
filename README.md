@@ -61,7 +61,6 @@
     - Android Studio Iguana or newer recommended
 
     - Gradle will sync automatically
-    ```
 
 3. **Run the app**  
     - Select a device or emulator
