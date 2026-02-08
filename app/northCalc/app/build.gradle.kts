@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.northapps.calculator"
+    namespace = "com.northapps.northcalc"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.northapps.linkup"
+        applicationId = "com.northapps.northCalc"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

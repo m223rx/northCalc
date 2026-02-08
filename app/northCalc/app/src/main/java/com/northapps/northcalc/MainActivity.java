@@ -1,4 +1,4 @@
-package com.northapps.calculator;
+package com.northapps.northcalc;
 
 import android.os.Bundle;
 import android.view.View;

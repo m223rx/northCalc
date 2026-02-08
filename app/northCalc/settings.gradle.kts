@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LinkUP"
+rootProject.name = "northCalc"
 include(":app")
